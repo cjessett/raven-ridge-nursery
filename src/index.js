@@ -10,7 +10,21 @@ const iotData = new AWS.IotData({
 });
 
 iotData.getThingShadow({ thingName: 'raven-pi-temp' }, (err, data) => {
-  const { state: { reported: { temp } } } = JSON.parse(data.payload);
+  const { state: { reported: { temp } }, metadata } = JSON.parse(data.payload);
+  const { reported: { temp: { timestamp } } } = metadeta;
+
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short',
+  }
+  const time = new Date(timestamp*1000).toLocaleString(options);
+
   document.getElementById('temperature').innerText = Math.floor(temp);
+  document.getElementById('timestamp').innerText = time;
   document.getElementById('units').style.display = 'inline';
 });

@@ -25,6 +25,10 @@ main {
   display: none;
 }
 
+#timestamp {
+  font-size: 2em;
+}
+
 @media only screen and (max-device-width: 480px) {
     header {
       font-size: 4em;
@@ -32,5 +36,9 @@ main {
 
     #temperature {
       font-size: 22em;
+    }
+
+    #timestamp {
+      font-size: 4em;
     }
 }

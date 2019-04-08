@@ -25,8 +25,14 @@ main {
   display: none;
 }
 
-#timestamp {
+#last-updated {
   font-size: 2em;
+  display: none;
+  margin: 1em;
+}
+
+#timestamp {
+  font-size: 1em;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -37,8 +43,17 @@ main {
     #temperature {
       font-size: 22em;
     }
+    
+    #units {
+      font-size: 11em;
+    }
 
-    #timestamp {
+    #last-updated {
       font-size: 4em;
+      margin: 1em 0;
+    }
+    
+    #timestamp {
+      font-size: 2em;
     }
 }

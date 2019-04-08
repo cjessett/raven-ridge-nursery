@@ -13,17 +13,18 @@ function setDiff(date) {
   return () => {      
     const now = new Date();
     const diff = Math.abs(now.getTime() - date.getTime()) / 1000;
-  
+
     const d = Math.floor(diff / 86400);
     const h = Math.floor(diff / 3600) % 24;
     const m = Math.floor(diff / 60) % 60;
     const s = Math.floor(diff % 60);
-    
+
     let display = '';
     if (d) display += `${days}d `;
     if (h) display += `${h}h `;
     if (m) display += `${m}m `;
-    if (s) display += `${s}s ago`
+    if (s) display += `${s}s `;
+    display += 'ago';
 
     document.getElementById('last-updated').style.display = 'block';
     document.getElementById('last-updated').children[0].innerText = display;

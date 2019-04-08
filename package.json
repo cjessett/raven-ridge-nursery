@@ -9,6 +9,7 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
+    "aws-iot-device-sdk": "^2.2.1",
     "aws-sdk": "^2.432.0",
     "webpack": "^4.29.6"
   },

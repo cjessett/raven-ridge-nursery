@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Raven Ridge Nursery Temperature</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon.png">
@@ -12,10 +13,11 @@
     <main>
       <div>
         <span id="temperature"></span>
-        <span id="units">°F</span>
+        <span id="units">&deg;</span>
       </div>
       <div>
-        <span id="timestamp"></span>
+        <div id="last-updated">Last Updated: <span></span></div>
+        <div id="timestamp"></div>
       </div>
     </main>
     <script src="main.js"></script>
